@@ -1,3 +1,15 @@
 * DESIGN PATTERNS
 Repository to keep track of my progress with design patterns.
 
+** OO Principles
+- encapsulate what varies
+- favor composition over inheritance
+- program to interfaces, not implementations
+
+  
+** Patterns that flew by...
+1. Strategy pattern
+   - defines a family of algorithms
+   - encapsulates each one and makes them interchangeable
+   - lets the algorithm vary independently, depending on how the
+     clients decides to use it 
