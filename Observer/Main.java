@@ -1,3 +1,4 @@
+import java.util.*;
 /*
  * The updates that would be implemented will only apply to the objects.
  * How it is implemented on the front end is out of scope.
@@ -12,6 +13,7 @@ public class Main {
 		ArrayList<Observer> obs = new ArrayList<>();
 		obs.add(new CurrentConditions(weatherData)); // shesh, multiple type of displays integrating with each other through
 																									// duck tying :()
+		obs.add(new StatisticsDisplay(weatherData));
 		obs.add(new HeatIndexDisplay(weatherData));
 
 		weatherData.setMeasurements(80, 65, 30.4f); // this broadcasts the information to all objects connected
@@ -149,4 +151,43 @@ class HeatIndexDisplay implements Observer, Display {
 		System.out.println("Heat Index: " + this.heatIndex);
 	}
 
+}
+
+class StatisticsDisplay implements Display, Observer {
+	private float temp;
+	private float humidity;
+	private float pressure;
+	private WeatherData weatherData;
+	private ArrayList<Float> temps = new ArrayList<>();
+
+	public StatisticsDisplay(WeatherData data) {
+		this.weatherData = data;
+		this.weatherData.registerUsers(this);
+	}
+
+	public void update(float temp, float humidity, float pressure) {
+		this.temp = temp;
+		temps.add(temp);
+		display();
+	}
+
+	public float getAverageTemp() {
+		float total = 0;
+		for (float item : this.temps) {
+			total += item;
+		}
+		return total / (temps.size());
+	}
+
+	public double getMinTemp() {
+		return Collections.min(temps);
+	}
+
+	public double getMaxTemp() {
+		return Collections.max(temps);
+	}
+
+	public void display() {
+		System.out.println("Avg temp: " + getAverageTemp() + "\tmin: " + getMinTemp() + "\tmax: " + getMaxTemp());
+	}
 }
