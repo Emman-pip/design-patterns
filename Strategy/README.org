@@ -1,0 +1,21 @@
+* The Strategy Pattern
+
+** What is it?
+The strategy pattern is a design pattern that seperates the flexible
+from the static parts of a program. For example, seperating the
+properties of a character object (skill, weapon, and race) from the
+character object itself.
+
+The flexibility could be seperated from the static part of the program
+using attributes that implements duck typing (Weapon abstract class
+that is implemented using the Sword class).
+
+This pattern essentially enables selecting a pattern(algorithms) at
+runtime. Cool!!!
+
+** Use cases
+- Really good when inheritance is not working due to the everchanging
+  specs
+- When the objects have shared attribute/methods but differ a little.
+
+  
