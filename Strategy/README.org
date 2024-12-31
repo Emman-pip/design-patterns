@@ -1,6 +1,11 @@
 * The Strategy Pattern
 
 ** What is it?
+When someone says that they used the Strategy pattern, it means that
+they encapsulated certain entities/behaviors  in its own set of
+classes that can be easily maintained, expanded, tested, or even
+changed at runtime.
+
 The strategy pattern is a design pattern that seperates the flexible
 from the static parts of a program. For example, seperating the
 properties of a character object (skill, weapon, and race) from the
@@ -17,5 +22,3 @@ runtime. Cool!!!
 - Really good when inheritance is not working due to the everchanging
   specs
 - When the objects have shared attribute/methods but differ a little.
-
-  
