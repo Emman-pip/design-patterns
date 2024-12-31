@@ -1,0 +1,25 @@
+* Observer design pattern
+
+** What is it?
+The observer pattern defines a one-to-many dependency between objects,
+when one object updates/changes state, other objects are notified
+and updated automatically.
+
+*Design principle is to strive for loosely coupled design* between
+objects that interact
+
+To understand the concept (isolated to the concept itself), one can
+think about the publishers/subscribers type of relationship. There is
+one publisher with multiple subscribers. Once the publishers publishes
+something, the subscribers get notified.
+
+In the real implementation, the observers could be other things
+(e.g. displays listening to an Subject Object, events that would
+happen once it has been notified that something has happened, and the
+like). This design would allow many Observers(listeners) to transform
+data/output from the single Subject.
+
+** Use cases
+- Publishers + Subscribers type of features
+- virtually any kind of feature that has one-to-many dependencies (as
+  long as it fits...)
