@@ -1,0 +1,21 @@
+* Decorator Design Patterm
+
+** What is it
+
+
+Is a pattern where in classes are decorated with whatever the spec
+is. For example, a beverage interface. When in it implemented, one
+will be able to add condiments to that class during runtime
+(decorating). It attaches additional responsibilities to an object
+dynamically. Decorators provide a flexible alternative to subclassing
+and extensing functionality
+
+*Design Principle*: Open-closed principle, design should be closed
+for modification but open for extension.
+
+Decorators have the *same supertype* (parent) as the objects they
+decorate. Meaning, the objects that are being decorated can also be
+used to decorate other objects (huh?).
+
+
+
