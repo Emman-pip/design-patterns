@@ -5,6 +5,8 @@ Repository to keep track of my progress with design patterns.
 - encapsulate what varies
 - favor composition over inheritance
 - program to interfaces, not implementations
+- strive for loosely coupled designs between objects that interact
+- code should be close for modification but open for extension
 
   
 ** Patterns that flew by...
@@ -12,4 +14,10 @@ Repository to keep track of my progress with design patterns.
    - defines a family of algorithms
    - encapsulates each one and makes them interchangeable
    - lets the algorithm vary independently, depending on how the
-     clients decides to use it 
+     clients decides to use it
+2. Observer pattern
+   - is a design pattern that is used when there is an observable and
+     observer
+   - used in one-to-many dependency between objects so that when one
+     object changes state, the other objects are
+     notified/updated/respond automatically

@@ -19,6 +19,13 @@ happen once it has been notified that something has happened, and the
 like). This design would allow many Observers(listeners) to transform
 data/output from the single Subject.
 
+It turns out, even Listeners (a concept from GUIs where an event is
+being listened for) is a form of the observer pattern. Components
+(e.g. buttons, links, etc.) are the observables and the actions (the
+classes or functions depending on the language used) linked to certain
+events that will be done in th componenets components are the
+observers.
+
 ** Use cases
 - Publishers + Subscribers type of features
 - virtually any kind of feature that has one-to-many dependencies (as
