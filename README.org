@@ -2,11 +2,12 @@
 Repository to keep track of my progress with design patterns.
 
 ** OO Principles
-- encapsulate what varies
-- favor composition over inheritance
-- program to interfaces, not implementations
-- strive for loosely coupled designs between objects that interact
-- code should be close for modification but open for extension
+- *encapsulate what varies*
+- favor *composition over inheritance*
+- *program to interfaces*, not implementations
+- strive for *loosely coupled designs* between objects that interact
+- code *should be close for modification* but open for extension
+  (Open-Closed principle)
 
   
 ** Patterns that flew by...
@@ -21,3 +22,10 @@ Repository to keep track of my progress with design patterns.
    - used in one-to-many dependency between objects so that when one
      object changes state, the other objects are
      notified/updated/respond automatically
+3. Decorator pattern
+   - attaches additional responsibility to an object dynamically
+   - provide a flexible alternative to subclassing for extending
+     functionality
+   - basically uses decorations(decorators) to decorate
+     components(object). To decorate means to use/modify/extend the
+     function 
