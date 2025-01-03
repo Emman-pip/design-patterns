@@ -19,12 +19,5 @@ public class Main {
 		weatherData.setMeasurements(82, 64, 30.4f); // this broadcasts the information to all objects connected
 		weatherData.setMeasurements(69, 59, 20.4f); // this broadcasts the information to all objects connected
 		weatherData.setMeasurements(50, 59, 100);
-		; // this broadcasts the information to all objects connected
-		// weatherData.setMeasurements(83, 63, 30.4f); // this broadcasts the
-		// information to all objects connected
-		// weatherData.setMeasurements(93, 63, 30.4f); // this broadcasts the
-		// information to all objects connected
-		// weatherData.setMeasurements(100, 63, 30.4f); // this broadcasts the
-		// information to all objects connected
 	}
 }
