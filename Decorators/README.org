@@ -2,20 +2,27 @@
 
 ** What is it
 
-
-Is a pattern where in classes are decorated with whatever the spec
-is. For example, a beverage interface. When in it implemented, one
-will be able to add condiments to that class during runtime
-(decorating). It attaches additional responsibilities to an object
+Is a pattern where in objects are decorated with whatever the spec
+is. For example, a beverage interface. When implemented, one will be
+able to add condiments to that object during runtime (decorating). It
+attaches additional responsibilities to an object
 dynamically. Decorators provide a flexible alternative to subclassing
-and extensing functionality
+and extending functionality
 
-*Design Principle*: Open-closed principle, design should be closed
-for modification but open for extension.
+*Design Principle*: Open-closed principle, design should be closed for
+modification but open for extension.
 
 Decorators have the *same supertype* (parent) as the objects they
 decorate. Meaning, the objects that are being decorated can also be
-used to decorate other objects (huh?).
+used to decorate other objects (at least if it was designed to do so).
 
-
-
+The decorator patterns have four components: (1) component, (2)
+concrete component, (3) decorator, and (4) concrete
+decorator. Component (1) is the abstract class or interface that will
+act as the supertype of all the other components of the
+pattern. Concrete component (2) is the implementation of the component
+interface/abstract class. It is the object to be decorated later. The
+decorator (3) is the abstract class/interface that will be use as the
+basis for the concrete decorators, also it inherits from the supertype
+(component interface/abstract classs). Concrete decorators (4) are the
+implementation of the decorators interface/abstract class.
