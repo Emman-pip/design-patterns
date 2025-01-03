@@ -6,9 +6,13 @@
 
 public class Mocha extends CondimentsDecorator {
 	Beverage beverage;
+	double condimentCost = .20;
 
 	public Mocha(Beverage beverage) {
 		this.beverage = beverage;
+		this.setSize(beverage.getSize());
+		this.condimentCost += (this.beverage.getSize() == Beverage.Size.TALL) ? .10
+				: (this.beverage.getSize() == Beverage.Size.MEDIUM) ? .15 : .20;
 	}
 
 	public String getDescription() {
@@ -16,6 +20,6 @@ public class Mocha extends CondimentsDecorator {
 	}
 
 	public double cost() {
-		return this.beverage.cost() + .20;
+		return this.beverage.cost() + this.condimentCost;
 	}
 }
