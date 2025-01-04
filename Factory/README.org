@@ -1,0 +1,20 @@
+* Factory design pattern
+
+A pattern that prevents the use of "new".
+
+** What is it?
+Factory design pattern is essentially a pattern that handles the
+details of object creation. This pattern allows abstraction when it
+comes to the creation of objects and decoupled classes interaction. 
+
+** Why use it?
+The new keyword is a concrete implementation. Every time it is used,
+one is programming to an implementation thus violating the design principle.
+
+
+* TODO IMPLEMENT A PIZZA STORE!!
+** Specs
+- franchises (NY, Chicago, etc.)
+- same flavor, different pizza styles (differen crust, sauce, etc.)
+
+
