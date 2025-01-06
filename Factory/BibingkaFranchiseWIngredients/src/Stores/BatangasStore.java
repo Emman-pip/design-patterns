@@ -1,5 +1,6 @@
 package src.Stores;
 
+import src.BibingkaFactories.BatangasBibingkaFactory;
 import src.Bibingkas.*;
 import src.Toppings.BatangasChili;
 
@@ -8,14 +9,7 @@ import src.Toppings.BatangasChili;
  */
 public class BatangasStore extends BibingkaStore {
 	public Bibingka createBibingka(String type) {
-		Bibingka bibingka = null;
-		if (type.equals("sweet")) {
-			bibingka = new BatangasSweetBibingka(this.ingredientFactory);
-		} else if (type.equals("chili")) {
-			bibingka = new BatangasChiliBibingka(this.ingredientFactory);
-		} else {
-			System.out.println("Invalid type");
-		}
+		Bibingka bibingka = new BatangasBibingkaFactory().createBibingka(type, ingredientFactory);
 		return bibingka;
 	}
 }

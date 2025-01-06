@@ -24,11 +24,11 @@ public abstract class BibingkaStore {
 
 	public abstract Bibingka createBibingka(String type);
 
-	public void slice(Bibingka bibingka) {
+	private void slice(Bibingka bibingka) {
 		System.out.println("slicing " + bibingka.getName() + " a " + bibingka.getType() + " bibingka to pieces!");
 	}
 
-	public void box(Bibingka bibingka) {
+	private void box(Bibingka bibingka) {
 		System.out.println("Putting " + bibingka.getName() + " a " + bibingka.getType() + " bibingka to a pretty box!");
 	}
 
@@ -39,7 +39,7 @@ public abstract class BibingkaStore {
 		System.out.println();
 	}
 
-	public void prep(Bibingka bibingka) {
+	private void prep(Bibingka bibingka) {
 		System.out.println("Preparing " + bibingka.getName() + ", " + bibingka.getType() + "...");
 		System.out.println("Preparing rice: " + bibingka.getRiceType().getName());
 		readIngredients(bibingka.getRiceType().getIngredients());
