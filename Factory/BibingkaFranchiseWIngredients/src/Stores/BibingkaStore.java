@@ -34,7 +34,7 @@ public abstract class BibingkaStore {
 
 	private void readIngredients(ArrayList<String> arr) {
 		for (String item : arr) {
-			System.out.println("\titem");
+			System.out.println("\t" + item);
 		}
 		System.out.println();
 	}

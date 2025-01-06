@@ -18,7 +18,9 @@ public abstract class Bibingka {
 		return name;
 	}
 
-	public Bibingka(IngredientFactory ingredientFactory) {
+	public Bibingka(String name, String type, IngredientFactory ingredientFactory) {
+		this.name = name;
+		this.type = type;
 		this.riceType = ingredientFactory.createRice(this);
 		this.sauce = ingredientFactory.createSauce(this);
 		this.toppings = ingredientFactory.createToppings(this);

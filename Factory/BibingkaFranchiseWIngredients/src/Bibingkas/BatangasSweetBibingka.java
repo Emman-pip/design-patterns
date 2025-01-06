@@ -9,8 +9,6 @@ import src.IngredientFactories.IngredientFactory;
  */
 public class BatangasSweetBibingka extends Bibingka {
 	public BatangasSweetBibingka(IngredientFactory ingredientFactory) {
-		super(ingredientFactory);
-		this.type = "sweet";
-		this.name = "Batangas sweet bibingka";
+		super("Batangas sweet bibingka", "sweet", ingredientFactory);
 	}
 }
