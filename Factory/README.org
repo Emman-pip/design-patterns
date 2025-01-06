@@ -1,20 +1,78 @@
 * Factory design pattern
 
-A pattern that prevents the use of "new".
-
 ** What is it?
 Factory design pattern is essentially a pattern that handles the
 details of object creation. This pattern allows abstraction when it
-comes to the creation of objects and decoupled classes interaction. 
+comes to the creation of objects and decoupled classes interaction.
+
+All factory patterns encapsulate object creation. It encapsulates
+objects creation by letting subclasses decide what objects to create.
+
+It defines an interface for creating an object, but lets subclasses
+decide which class to instantiate. Factory method lets a class defer
+instantiation to subclasses.
 
 ** Why use it?
 The new keyword is a concrete implementation. Every time it is used,
 one is programming to an implementation thus violating the design principle.
 
+** Dependency Inversion Principle
+The factory pattern reduces the dependencies of a class. That is a
+good thing since it results in decoupled code. The term that refers to
+the reduction of dependencies among interacting classes is *Dependency
+Inversion Princicple*.
 
-* TODO IMPLEMENT A PIZZA STORE!!
-** Specs
-- franchises (NY, Chicago, etc.)
-- same flavor, different pizza styles (differen crust, sauce, etc.)
+*DESIGN PRINCIPLE*: Depend upon abstraction, do not depend upon
+ concrete classes.
+
+The design principle only means that dependencies of classes should
+not be concrete classes, it chould be interfaces or abstract
+classes. Through that, more flexible code will be possible since all
+the current and future implementations of the abstraction can be used
+as the dependency (not locked into one).
+
+Both high-level and low-level components should depend on higher-level
+abstractions.
 
 
+
+*** NOTE
+a high-level component is a class with behavior defined in terms of
+other (low-level components).
+
+Example:
+
+A PizzaStore is a high-level component because its behavior is defined
+interms of pizzas (different pizza objects), the low-level component is
+the pizzas used.
+
+** Simple factory pattern method (not areal pattern)
+- has a limited factory (one-shot deal)
+- allows the creation of objects through a factory, but the factory is
+  limited to a class or two (doesn't provide a framework like the
+  factory method pattern does)
+
+** Factory method pattern defined
+- creator classes
+  - abstract creators
+    Interfaces to be implemented
+  - concrete creators
+    implemented abstract creators
+    
+- product classes
+  - abstract products
+  - concrete products
+
+** Abstract factory
+provides an interface for creating families of related or dependent
+object without specifying their concrete classes
+
+Gives an interface for creating a family of products. By writing code
+that uses the said interface, the code is decoupled from the actual
+factory that creates the products.
+
+
+    
+** THINK BOTTOM TO TOP
+- think about the low-level components first then comes the higher
+  level components
