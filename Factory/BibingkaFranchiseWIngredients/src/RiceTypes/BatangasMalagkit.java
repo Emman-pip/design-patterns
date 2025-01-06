@@ -5,7 +5,7 @@ package src.RiceTypes;
  */
 public class BatangasMalagkit extends RiceType {
 	public BatangasMalagkit() {
-		this.name = "Batangas malagkit"
+		this.name = "Batangas malagkit";
 		this.ingredients.add("malagkit");
 		this.ingredients.add("niyog");
 	}
