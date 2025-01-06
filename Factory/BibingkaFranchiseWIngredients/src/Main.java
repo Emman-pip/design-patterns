@@ -13,5 +13,6 @@ public class Main {
 		IngredientFactory bif = new BatangasIngredientFactory();
 		batangas.setIngredientFactory(bif);
 		batangas.order("sweet");
+		batangas.order("chili");
 	}
 }

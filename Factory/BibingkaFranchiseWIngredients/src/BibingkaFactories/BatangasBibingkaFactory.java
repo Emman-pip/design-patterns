@@ -11,6 +11,8 @@ public class BatangasBibingkaFactory extends BibingkaFactory {
 		Bibingka bibingka = null;
 		if (type.equals("sweet")) {
 			bibingka = new BatangasSweetBibingka(ingredientFactory);
+		} else if (type.equals("chili")) {
+			bibingka = new BatangasChiliBibingka(ingredientFactory);
 		}
 
 		return bibingka;
