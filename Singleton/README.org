@@ -1,0 +1,11 @@
+* Singleton Pattern
+One of a kind objects
+
+** What is it?
+
+Singleton pattern ensures a class has only one instance, and provides
+a global point of access to it.
+
+the singleton pattern allows one and only instance of an object in a
+program.
+
