@@ -64,13 +64,15 @@ the pizzas used.
   - concrete products
 
 ** Abstract factory
-provides an interface for creating families of related or dependent
+Provides an interface for creating families of related or dependent
 object without specifying their concrete classes
 
 Gives an interface for creating a family of products. By writing code
 that uses the said interface, the code is decoupled from the actual
 factory that creates the products.
 
+** Abstract factory pattern vs factory method
+factory method uses classes while abstract factory uses objects.
 
     
 ** THINK BOTTOM TO TOP

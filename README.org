@@ -8,6 +8,7 @@ Repository to keep track of my progress with design patterns.
 - strive for *loosely coupled designs* between objects that interact
 - code *should be close for modification* but open for extension
   (Open-Closed principle)
+- *depend on abstractions*. Do not depend on concrete classes
 
   
 ** Patterns that flew by...
@@ -28,4 +29,11 @@ Repository to keep track of my progress with design patterns.
      functionality
    - basically uses decorations(decorators) to decorate
      components(object). To decorate means to use/modify/extend the
-     function 
+     function
+4. Factory Method Pattern
+   - defines an interface for creating an object but let subclasses
+     decide which class to instantiate
+   - lets a class defer instantiation to the subclasses
+5. Abstract Factory Pattern
+   - provides an interface for creating families of related or
+     dependent objects without specifying their concrete classes 
