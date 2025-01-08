@@ -1,0 +1,6 @@
+* Command Pattern
+Encapsulationg the method invocation
+
+** What is it?
+A pattern that allows commands to be passed then traslates to program
+behavior. 
