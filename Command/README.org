@@ -2,5 +2,9 @@
 Encapsulationg the method invocation
 
 ** What is it?
+
 A pattern that allows commands to be passed then traslates to program
-behavior. 
+behavior.
+
+A command object encapsulates a request to do something (like turn on
+a light) on a specific object (say, the living room light object).
