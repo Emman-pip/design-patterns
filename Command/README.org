@@ -1,10 +1,14 @@
 * Command Pattern
-Encapsulationg the method invocation
+Encapsulating the method invocation
 
 ** What is it?
 
-A pattern that allows commands to be passed then traslates to program
+A pattern that allows commands to be passed then translated to program
 behavior.
 
 A command object encapsulates a request to do something (like turn on
 a light) on a specific object (say, the living room light object).
+
+The command pattern encapsulates a request as an ogbject thereby
+letting you parameterize other objects with different requests, queue
+or log requests, and support undoable operations.
