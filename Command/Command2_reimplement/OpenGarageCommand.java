@@ -6,4 +6,8 @@ public class OpenGarageCommand implements Command {
     public void execute(){
 	garage.open();
     }
+
+    public void undo(){
+	garage.close();
+    }
 }

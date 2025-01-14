@@ -1,7 +1,18 @@
 public class RemoteControl {
     private Command[] onCommands = new Command[7];
     private Command[] offCommands = new Command[7];
+    // keep history of up to 10 commands
+    private Command[] undoCommands = new Command[10];
 
+    public void pressUndo(){
+	// System.out.println(java.util.Arrays.toString(undoCommands));
+	if (undoCommands[undoCommands.length-1] == null){
+	    System.out.println("No undo actions available");
+	    return;
+	}
+	StackUtils.pop(this.undoCommands).undo();
+	// System.out.println(java.util.Arrays.toString(undoCommands));	
+    }
     public RemoteControl(){
 	NoCommand noCommand = new NoCommand();
 	for (int i = 0; i< 7; i++){
@@ -17,10 +28,17 @@ public class RemoteControl {
 
     public void pressOn(int slotNumber){
 	onCommands[slotNumber].execute();
+	if (!(onCommands[slotNumber] instanceof NoCommand)){
+	    StackUtils.pushToStack(this.undoCommands, onCommands[slotNumber]);
+	}
     }
 
     public void pressOff(int slotNumber){
 	offCommands[slotNumber].execute();
+	if (!(onCommands[slotNumber] instanceof NoCommand)){
+	    StackUtils.pushToStack(this.undoCommands, offCommands[slotNumber]);
+	}
+
     }
 
     public void printConfiguration(){

@@ -7,7 +7,6 @@ public class Test {
 
 	remote.setCommand(1, new StereoOnCommand(), new StereoOffCommand());
 	remote.printConfiguration();
-
 	remote.pressOn(0);
 	remote.pressOff(0);
 
@@ -16,6 +15,17 @@ public class Test {
 
 	remote.pressOn(2);
 	remote.pressOff(2);
+	
+	remote.pressUndo();
+	remote.pressUndo();
+
+	remote.pressUndo();
+	remote.pressUndo();
+	remote.pressUndo();
+	remote.pressUndo();
+	remote.pressUndo();
+
+	remote.pressUndo();
 
     }
 }

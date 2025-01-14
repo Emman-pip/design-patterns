@@ -7,4 +7,8 @@ public class CloseGarageCommand implements Command {
     public void execute(){
 	garage.close();
     }
+
+    public void undo(){
+	garage.open();
+    }
 }
