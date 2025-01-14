@@ -37,6 +37,9 @@ Repository to keep track of my progress with design patterns.
 5. Abstract Factory Pattern
    - provides an interface for creating families of related or
      dependent objects without specifying their concrete classes 
-6. Singlton Pattern
+6. Singleton Pattern
    - singleton pattern ensures a class has only one instance, and
      provides a global point of access to it.
+7. Cammand pattern
+   - encapsulates a request as an object thus allowing parametezation of
+     other objects with different requests and support undoable operations
