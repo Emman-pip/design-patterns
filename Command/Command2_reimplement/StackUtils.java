@@ -13,7 +13,7 @@ public class StackUtils {
 	    arr[i] = arr[i-1];
 	}
 
-	arr[0] = new NoCommand();
+	arr[0] = () -> { };
 
 	return res;
     }

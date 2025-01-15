@@ -10,14 +10,12 @@ public class RemoteControl {
 	    System.out.println("No undo actions available");
 	    return;
 	}
-	StackUtils.pop(this.undoCommands).undo();
 	// System.out.println(java.util.Arrays.toString(undoCommands));	
     }
     public RemoteControl(){
-	NoCommand noCommand = new NoCommand();
 	for (int i = 0; i< 7; i++){
-	    onCommands[i] = noCommand;
-	    offCommands[i] = noCommand;
+	    onCommands[i] = () -> { };
+	    offCommands[i] = () -> { };
 	}
     }
 
@@ -28,17 +26,10 @@ public class RemoteControl {
 
     public void pressOn(int slotNumber){
 	onCommands[slotNumber].execute();
-	if (!(onCommands[slotNumber] instanceof NoCommand)){
-	    StackUtils.pushToStack(this.undoCommands, onCommands[slotNumber]);
-	}
     }
 
     public void pressOff(int slotNumber){
 	offCommands[slotNumber].execute();
-	if (!(onCommands[slotNumber] instanceof NoCommand)){
-	    StackUtils.pushToStack(this.undoCommands, offCommands[slotNumber]);
-	}
-
     }
 
     public void printConfiguration(){
